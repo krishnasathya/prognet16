@@ -43,4 +43,10 @@ Route::prefix('admin')->group(function (){
     Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
     Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset')->name('admin.password.update');
+
+    
 });
+
+    Route::resource('/courier','CourierController');
+    Route::resource('/product-category','ControllerProductCategory');
+    Route::resource('/product','ControllerProduct');
