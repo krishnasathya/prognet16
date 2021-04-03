@@ -21,7 +21,7 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+Route::get('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout'); #komeeeennnnn
 
 Route::prefix('admin')->group(function (){
     //Dashboard routes
